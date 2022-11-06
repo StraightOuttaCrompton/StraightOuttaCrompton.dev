@@ -4,7 +4,7 @@
 @import "./material";
 
 html {
-    --mdc-typography-font-family: Arial, Helvetica, sans-serif;
+    --mdc-typography-font-family: "Courier New", monospace;
     font-size: 17px;
 
     @media (max-width: $lg) {
