@@ -43,10 +43,10 @@
         <link rel="canonical" href="{{ ROOT_URL }}" />
     </head>
     <body class="theme-light mdc-typography">
-        <div id="particles-js" class="particles"></div>
+        <div aria-hidden="true" id="particles-js" class="particles"></div>
 
         <div class="app-container">
-            <header>
+            <header aria-label="Header links">
                 <a
                     href="https://github.com/StraightOuttaCrompton"
                     target="_blank"
@@ -80,7 +80,7 @@
                     data-tooltip-id="email-tooltip"
                     aria-label="Email"
                 >
-                    <module href="/icons/email.svg"></module>
+                    <module href="/icons/envelope.svg"></module>
                 </a>
                 <div id="email-tooltip" class="mdc-tooltip" role="tooltip" aria-hidden="true">
                     <div class="mdc-tooltip__surface">Email</div>
@@ -91,9 +91,10 @@
                     style="color: inherit"
                     class="mdc-icon-button material-icons"
                     data-tooltip-id="dove-tooltip"
-                    aria-label="Toggle Michael Bluth"
+                    aria-hidden="true"
+                    tabindex="-1"
                 >
-                    <module href="/icons/peaceDove.svg"></module>
+                    <module href="/icons/dove.svg"></module>
                 </button>
                 <div id="dove-tooltip" class="mdc-tooltip" role="tooltip" aria-hidden="true">
                     <div class="mdc-tooltip__surface">
@@ -103,7 +104,7 @@
                 </div>
             </header>
 
-            <main class="intro" id="home">
+            <main class="intro" aria-label="Main">
                 <div class="intro-content">
                     <h1>
                         <span class="typewriter-text"></span><span class="typewriter-cursor"></span>
@@ -111,20 +112,18 @@
                 </div>
             </main>
 
-            <footer>
-                <div>
-                    <a
-                        href="https://github.com/StraightOuttaCrompton/StraightOuttaCrompton.dev"
-                        target="_blank"
-                        class="mdc-icon-button material-icons"
-                        data-tooltip-id="source-tooltip"
-                        aria-label="Source code"
-                    >
-                        <module href="/icons/gitLogo.svg"></module>
-                    </a>
-                    <div id="source-tooltip" class="mdc-tooltip" role="tooltip" aria-hidden="true">
-                        <div class="mdc-tooltip__surface">Source code</div>
-                    </div>
+            <footer aria-label="Footer">
+                <a
+                    href="https://github.com/StraightOuttaCrompton/StraightOuttaCrompton.dev"
+                    target="_blank"
+                    class="mdc-icon-button material-icons"
+                    data-tooltip-id="source-tooltip"
+                    aria-label="Source code"
+                >
+                    <module href="/icons/git.svg"></module>
+                </a>
+                <div id="source-tooltip" class="mdc-tooltip" role="tooltip" aria-hidden="true">
+                    <div class="mdc-tooltip__surface">Source code</div>
                 </div>
                 <div class="darkmode-switch">
                     <div class="mdc-switch">
@@ -147,8 +146,8 @@
                 </div>
             </footer>
         </div>
-        <div id="michael-bluth" class="michael-bluth__container">
-            <video width="444" height="250" id="michael-bluth-video">
+        <div id="michael-bluth" class="michael-bluth__container" aria-hidden="true" tabindex="-1">
+            <video width="444" height="250" id="michael-bluth-video" aria-hidden="true">
                 <source src="assets/michaelBluth/michaelBluth.mp4" type="video/mp4" />
                 Your browser does not support the video tag 😬
             </video>
