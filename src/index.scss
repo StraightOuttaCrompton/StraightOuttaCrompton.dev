@@ -52,6 +52,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.invisible {
+    position: absolute;
+    top: -999999em;
+    left: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 .app-container {
     @include themify($themes) {
         color: themed("textPrimary");

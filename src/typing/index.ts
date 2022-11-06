@@ -4,13 +4,26 @@ import wait from "../utils/wait";
 document.addEventListener("DOMContentLoaded", async () => {
     await wait(500);
 
-    const txtElement = document.querySelector(".typewriter-text");
-    if (!txtElement) {
-        return;
+    const typewriterSelector = ".typewriter";
+    const typewriterElement = document.querySelector(typewriterSelector);
+    if (!typewriterElement) {
+        throw new Error(`No element matching '${typewriterSelector}' selector`);
     }
 
-    const sentencesToType = ["Hello", "My name is Jack", "I'm a developer at Proton"];
+    const typewriterTextSelector = ".typewriter-text h2";
+    const textElements = document.querySelectorAll(typewriterTextSelector);
+    if (!textElements) {
+        throw new Error(`No element matching '${typewriterTextSelector}' selector`);
+    }
 
-    const typeWriter = new TypeWriter(txtElement, sentencesToType);
+    const sentencesToType: string[] = [];
+    textElements.forEach((element) => {
+        const textContent = element.textContent;
+        if (!textContent) return;
+
+        sentencesToType.push(textContent);
+    });
+
+    const typeWriter = new TypeWriter(typewriterElement, sentencesToType);
     typeWriter.type();
 });
