@@ -1,0 +1,9 @@
+@use "@material/icon-button";
+@include icon-button.core-styles;
+
+.mdc-icon-button {
+    // https://github.com/material-components/material-components-web/tree/master/packages/mdc-icon-button#sass-mixins
+    @include themify($themes) {
+        @include icon-button.ink-color(themed("primaryMain"));
+    }
+}

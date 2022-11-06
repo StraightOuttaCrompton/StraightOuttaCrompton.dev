@@ -1,0 +1,17 @@
+.michael-bluth__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    transform: translateY(-100%);
+    transition: transform 1100ms linear;
+    pointer-events: none;
+}
+
+.michael-bluth__container--open {
+    transform: translateY(0%);
+}

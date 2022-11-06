@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- META DATA -->
+        <meta charset="UTF-8" />
+        <title>SOC</title>
+        <meta name="description" content="StraightOuttaCrompton's site" />
+        <meta
+            name="keywords"
+            content="SOC, StraightOuttaCrompton, HTML, CSS, JavaScript, React, TypeScript, Website, Web Dev, Web Developer"
+        />
+        <meta name="author" content="StraightOuttaCrompton" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+        <!-- OPEN GRAPH -->
+        <meta property="og:image" content="ogimage.png" />
+        <meta property="og:url" content="{{ ROOT_URL }}" />
+        <meta property="og:title" content="StraightOuttaCrompton" />
+        <meta property="og:description" content="Welcome to my site" />
+        <meta property="og:type" content="website" />
+
+        <!-- ICONS -->
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="SOC" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <link rel="manifest" href="manifest.webmanifest" />
+        <meta name="application-name" content="SOC" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="theme-color" content="#1B242F" />
+
+        <!-- PRELOAD -->
+        <link rel="preload" href="../src/index.scss" as="style" />
+        <link rel="preload" href="../src/index.ts" as="script" />
+
+        <!-- RESOURCES -->
+        <link rel="stylesheet" type="text/css" href="../src/index.scss" />
+
+        <!-- MISC -->
+        <link rel="canonical" href="{{ ROOT_URL }}" />
+    </head>
+    <body class="theme-light mdc-typography">
+        <div id="particles-js" class="particles"></div>
+
+        <div class="app-container">
+            <header>
+                <a
+                    href="https://github.com/StraightOuttaCrompton"
+                    target="_blank"
+                    style="color: inherit"
+                    class="mdc-icon-button material-icons"
+                    data-tooltip-id="github-tooltip"
+                    aria-label="GitHub"
+                >
+                    <module href="/icons/github.svg"></module>
+                </a>
+                <div id="github-tooltip" class="mdc-tooltip" role="tooltip" aria-hidden="true">
+                    <div class="mdc-tooltip__surface">GitHub</div>
+                </div>
+
+                <a
+                    href="https://gitlab.com/StraightOuttaCrompton"
+                    target="_blank"
+                    class="mdc-icon-button material-icons"
+                    data-tooltip-id="gitlab-tooltip"
+                    aria-label="GitLab"
+                >
+                    <module href="/icons/gitlab.svg"></module>
+                </a>
+                <div id="gitlab-tooltip" class="mdc-tooltip" role="tooltip" aria-hidden="true">
+                    <div class="mdc-tooltip__surface">GitLab</div>
+                </div>
+
+                <a
+                    href="malto:contact@StraightOuttaCrompton.dev"
+                    class="mdc-icon-button material-icons"
+                    data-tooltip-id="email-tooltip"
+                    aria-label="Email"
+                >
+                    <module href="/icons/email.svg"></module>
+                </a>
+                <div id="email-tooltip" class="mdc-tooltip" role="tooltip" aria-hidden="true">
+                    <div class="mdc-tooltip__surface">Email</div>
+                </div>
+
+                <button
+                    id="dove-button"
+                    style="color: inherit"
+                    class="mdc-icon-button material-icons"
+                    data-tooltip-id="dove-tooltip"
+                    aria-label="Toggle Michael Bluth"
+                >
+                    <module href="/icons/peaceDove.svg"></module>
+                </button>
+                <div id="dove-tooltip" class="mdc-tooltip" role="tooltip" aria-hidden="true">
+                    <div class="mdc-tooltip__surface">
+                        <div>DEAD DOVE</div>
+                        <div>Do Not <span style="text-decoration: underline">Eat</span>!</div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="intro" id="home">
+                <div class="intro-content">
+                    <h1>
+                        <span class="typewriter-text"></span><span class="typewriter-cursor"></span>
+                    </h1>
+                </div>
+            </main>
+
+            <footer>
+                <div>
+                    <a
+                        href="https://github.com/StraightOuttaCrompton/StraightOuttaCrompton.dev"
+                        target="_blank"
+                        class="mdc-icon-button material-icons"
+                        data-tooltip-id="source-tooltip"
+                        aria-label="Source code"
+                    >
+                        <module href="/icons/gitLogo.svg"></module>
+                    </a>
+                    <div id="source-tooltip" class="mdc-tooltip" role="tooltip" aria-hidden="true">
+                        <div class="mdc-tooltip__surface">Source code</div>
+                    </div>
+                </div>
+                <div class="darkmode-switch">
+                    <div class="mdc-switch">
+                        <div class="mdc-switch__track"></div>
+                        <div class="mdc-switch__thumb-underlay">
+                            <div class="mdc-switch__thumb"></div>
+                            <input
+                                type="checkbox"
+                                id="darkmode-switch"
+                                class="mdc-switch__native-control"
+                                role="switch"
+                                checked
+                                aria-checked="true"
+                            />
+                        </div>
+                    </div>
+                    <label for="darkmode-switch" class="mdc-typography--subtitle1">
+                        Dark mode
+                    </label>
+                </div>
+            </footer>
+        </div>
+        <div id="michael-bluth" class="michael-bluth__container">
+            <video width="444" height="250" id="michael-bluth-video">
+                <source src="assets/michaelBluth/michaelBluth.mp4" type="video/mp4" />
+                Your browser does not support the video tag 😬
+            </video>
+        </div>
+
+        <script defer src="../src/index.ts"></script>
+    </body>
+</html>

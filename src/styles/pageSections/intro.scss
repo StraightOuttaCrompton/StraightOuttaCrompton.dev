@@ -1,0 +1,14 @@
+.intro {
+    display: flex;
+    flex: 1 0 auto;
+    position: relative;
+    text-align: center;
+    pointer-events: none;
+
+    &-content {
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: center;
+        align-items: center;
+    }
+}

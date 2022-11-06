@@ -1,0 +1,15 @@
+.typewriter-cursor {
+    display: inline-block;
+    min-height: 1.1em;
+    vertical-align: bottom;
+    width: 1ch;
+    background-color: currentColor;
+    animation: blink 0.5s step-end infinite alternate;
+    opacity: 0.3;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

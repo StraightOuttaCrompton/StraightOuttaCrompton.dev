@@ -1,0 +1,21 @@
+@use "@material/icon-button";
+
+.material-icons.md-18 {
+    @include icon-button.icon-size(18px);
+}
+
+.material-icons.md-24 {
+    @include icon-button.icon-size(24px);
+}
+
+.material-icons.md-36 {
+    @include icon-button.icon-size(36px);
+}
+
+.material-icons.md-48 {
+    @include icon-button.icon-size(48px);
+}
+
+.material-icons.md-60 {
+    @include icon-button.icon-size(60px);
+}

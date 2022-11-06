@@ -1,0 +1,82 @@
+$spacing: 8px;
+
+$xs: 600px;
+$sm: 960px;
+$md: 1280px;
+$lg: 1920px;
+
+$siteContentMaxWidth: 1200px;
+$appBarHeight: 60px;
+
+// https://medium.com/@dmitriy.borodiy/easy-color-theming-with-scss-bc38fd5734d1
+$themes: (
+    light: (
+        // Primary
+        primaryLight: #ff784e,
+        primaryMain: #ff5722,
+        primaryDark: #b23c17,
+        primaryContrastText: #fff,
+        // Secondary
+        secondaryLight: #ff4081,
+        secondaryMain: #f50057,
+        secondaryDark: #020202,
+        secondaryContrastText: #fff,
+        // Text
+        textPrimary: rgba(0, 0, 0, 0.87),
+        textSecondary: rgba(0, 0, 0, 0.54),
+        textDisabled: rgba(0, 0, 0, 0.38),
+        textHint: rgba(0, 0, 0, 0.38),
+        // Background
+        primaryBackgroundPaper: #f8f8f8,
+        primaryBackgroundDefault: #f1f1f1,
+        secondaryBackgroundPaper: #f8f8f8,
+        secondaryBackgroundDefault: #12122f,
+        secondaryBackgroundDefaultContrastText: #fff,
+    ),
+    dark: (
+        primaryLight: #ff784e,
+        primaryMain: #ff5722,
+        primaryDark: #b23c17,
+        primaryContrastText: #fff,
+        // Secondary
+        secondaryLight: #ff4081,
+        secondaryMain: #f50057,
+        secondaryDark: #020202,
+        secondaryContrastText: #fff,
+        // Text
+        textPrimary: rgba(255, 255, 255, 0.87),
+        textSecondary: rgba(255, 255, 255, 0.54),
+        textDisabled: rgba(255, 255, 255, 0.38),
+        textHint: rgba(255, 255, 255, 0.38),
+        // Background
+        primaryBackgroundPaper: #111,
+        primaryBackgroundDefault: #222,
+        secondaryBackgroundPaper: #111,
+        secondaryBackgroundDefault: #b23c17,
+        secondaryBackgroundDefaultContrastText: #fff,
+    ),
+);
+
+@mixin themify($themes: $themes) {
+    @each $theme, $map in $themes {
+        .theme-#{$theme} & {
+            $theme-map: () !global;
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), "#{$key}");
+                $theme-map: map-merge(
+                    $theme-map,
+                    (
+                        $key: $value,
+                    )
+                ) !global;
+            }
+
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}

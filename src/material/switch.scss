@@ -1,0 +1,11 @@
+@use "@material/switch";
+@include switch.core-styles;
+
+@import "../styles/themes";
+
+.mdc-switch {
+    // https://github.com/material-components/material-components-web/tree/master/packages/mdc-switch#sass-mixins
+    @include themify($themes) {
+        @include switch.toggled-on-color(themed("primaryMain"));
+    }
+}
