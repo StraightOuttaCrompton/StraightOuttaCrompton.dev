@@ -22,4 +22,4 @@ npm run build
 
 ## Get in touch
 
-[contact@straightouttacrompton.dev](malto:contact@StraightOuttaCrompton.dev)
+[contact@straightouttacrompton.dev](mailto:contact@StraightOuttaCrompton.dev)
